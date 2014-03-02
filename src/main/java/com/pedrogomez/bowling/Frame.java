@@ -24,4 +24,8 @@ interface Frame {
 
     int getScore();
 
+    boolean hasToDuplicateNextFrame();
+
+    int getDuplicationDuration();
+
 }

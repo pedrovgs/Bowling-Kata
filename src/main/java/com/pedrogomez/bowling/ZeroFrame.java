@@ -36,4 +36,14 @@ class ZeroFrame implements Frame {
     public int getScore() {
         return SCORE;
     }
+
+    @Override
+    public boolean hasToDuplicateNextFrame() {
+        return false;
+    }
+
+    @Override
+    public int getDuplicationDuration() {
+        return 0;
+    }
 }

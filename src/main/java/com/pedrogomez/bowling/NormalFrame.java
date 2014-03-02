@@ -23,12 +23,6 @@ package com.pedrogomez.bowling;
 class NormalFrame implements Frame {
 
     /*
-     * Constants
-     */
-
-    private static final int SCORE = 0;
-
-    /*
      * Attributes
      */
 
@@ -50,6 +44,17 @@ class NormalFrame implements Frame {
 
     @Override
     public int getScore() {
-        return SCORE;
+        return firstThrow + secondThrow;
+    }
+
+    @Override
+    public boolean hasToDuplicateNextFrame() {
+        return false;
+    }
+
+
+    @Override
+    public int getDuplicationDuration() {
+        return 0;
     }
 }

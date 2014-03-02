@@ -26,7 +26,8 @@ class StrikeFrame implements Frame {
      * Constants
      */
 
-    private static final int SCORE = 0;
+    private static final int SCORE = 10;
+    private static final int DUPLICATION_DURATION = 2;
 
     /*
      * Implemented methods
@@ -35,5 +36,16 @@ class StrikeFrame implements Frame {
     @Override
     public int getScore() {
         return SCORE;
+    }
+
+    @Override
+    public boolean hasToDuplicateNextFrame() {
+        return true;
+    }
+
+
+    @Override
+    public int getDuplicationDuration() {
+        return DUPLICATION_DURATION;
     }
 }

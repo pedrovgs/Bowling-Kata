@@ -16,6 +16,9 @@
 
 package com.pedrogomez.bowling;
 
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * Represents a bowling game. This entity will be used to simulate a bowling game with only one player. The client code
  * will be able to use this entity to indicate a new Frame and will return the result using getScore() method.
@@ -25,15 +28,61 @@ package com.pedrogomez.bowling;
 class BowlingGame {
 
     /*
+     * Constants
+     */
+
+    private static final int FRAMES_PER_GAME = 10;
+
+    /*
+     * Attributes
+     */
+
+    private List<Frame> frames = new LinkedList<Frame>();
+
+
+    /*
      * Public methods
      */
 
     void addFrame(Frame frame) {
-
+        frames.add(frame);
     }
+
 
     int getScore() {
-        return -1;
+        int score = 0;
+        for (int currentFrame = 0; currentFrame < FRAMES_PER_GAME; currentFrame++) {
+            Frame frame = frames.get(currentFrame);
+            score = incrementScore(score, frame);
+            if (shouldDuplicateNextScores(frame)) {
+                score = duplicateNextScores(score, currentFrame, frame);
+            }
+        }
+        return score;
     }
+
+    private int incrementScore(int score, Frame frame) {
+        score += frame.getScore();
+        return score;
+    }
+
+    /*
+     * Auxiliary methods
+     */
+
+    private boolean shouldDuplicateNextScores(Frame frame) {
+        return frame.hasToDuplicateNextFrame() && frame.getDuplicationDuration() > 0;
+    }
+
+    private int duplicateNextScores(int score, int currentFrame, Frame frame) {
+        final int topNextFrame = currentFrame + 1;
+        int nextFrame = topNextFrame;
+        while (nextFrame < (topNextFrame + frame.getDuplicationDuration())) {
+            score = incrementScore(score, frames.get(nextFrame));
+            nextFrame++;
+        }
+        return score;
+    }
+
 
 }
