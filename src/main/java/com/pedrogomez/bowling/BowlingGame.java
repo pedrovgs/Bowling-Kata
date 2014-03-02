@@ -32,7 +32,6 @@ class BowlingGame {
      */
 
     private static final int FRAMES_PER_GAME = 10;
-    private static final int EXTRA_SPARE_SCORE = 10;
 
     /*
      * Attributes

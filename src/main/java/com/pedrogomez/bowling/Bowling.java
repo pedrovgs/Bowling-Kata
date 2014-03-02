@@ -31,18 +31,20 @@ public class Bowling {
     /*
      * Attributes
      */
+
     private LineParser lineParser;
 
     /*
      * Constructor
      */
+
     public Bowling() {
         initializeLineParser();
     }
 
 
     /**
-     * Calculate the score of a roll sequence for a bowling match.
+     * Calculate the score of a roll sequence for a bowling game.
      *
      * @param rolls valid sequence of rolls in one line.
      * @return calculated score.

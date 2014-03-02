@@ -16,7 +16,8 @@
 package com.pedrogomez.bowling;
 
 /**
- * Interface created to represent one bowling frame. Different implementations will have to return different frames.
+ * Interface created to represent one bowling frame parser. Different implementations will have to return different frames.
+ * The class responsibility is transform one frame represented with String to a valid Frame implementation.
  *
  * @author Pedro Vicente Gómez Sánchez.
  */

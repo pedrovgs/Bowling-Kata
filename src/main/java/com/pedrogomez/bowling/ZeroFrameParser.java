@@ -18,7 +18,7 @@ package com.pedrogomez.bowling;
 
 /**
  * FrameParser implementation created to return a ZeroFrame if the frame analyzed contains is equals to "--".
- * This FrameParser will return null if the analyzed frame is not an "__".
+ * This FrameParser will return null if the analyzed frame is not equals to "--".
  *
  * @author Pedro Vicente Gómez Sánchez.
  */
