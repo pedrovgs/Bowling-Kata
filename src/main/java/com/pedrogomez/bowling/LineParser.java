@@ -16,6 +16,7 @@
 package com.pedrogomez.bowling;
 
 import java.util.Collection;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -26,11 +27,73 @@ import java.util.List;
  */
 class LineParser {
 
+    /*
+     * Constants
+     */
+
+    public static final char ONE_CHAR_VALID_FRAME = 'X';
+
+    /*
+     * Attributes
+     */
+
+    private final Collection<FrameParser> parsers;
+    private int parsingIndex;
+
+    /*
+     * Constructor
+     */
+
     public LineParser(Collection<FrameParser> parsers) {
-
+        this.parsers = parsers;
     }
 
+
+    /**
+     * Analyze one line and return a List<Frame> with the associated value for each frame.
+     *
+     * @param line to split in different frames.
+     * @return List<Frame>
+     */
     public List<Frame> parse(final String line) {
-        return null;
+        List<Frame> frames = new LinkedList<Frame>();
+        for (parsingIndex = 0; parsingIndex < line.length(); parsingIndex++) {
+            Frame frame = parseFrame(line);
+            frames.add(frame);
+        }
+        return frames;
     }
+
+
+    /*
+     * Auxiliary methods
+     */
+
+    private boolean isOneCharFrame(String line, int i) {
+        return line.charAt(i) == ONE_CHAR_VALID_FRAME;
+    }
+    
+    private Frame parseFrame(String line) {
+        String frameToAnalyze;
+        if (isOneCharFrame(line, parsingIndex)) {
+            frameToAnalyze = line.charAt(parsingIndex) + "";
+        } else {
+            frameToAnalyze = line.substring(parsingIndex, parsingIndex + 2);
+            parsingIndex++;
+        }
+        return getFrame(frameToAnalyze);
+    }
+
+    private Frame getFrame(String frameToAnalyze) {
+        Frame result = null;
+        for (FrameParser frameParser : parsers) {
+            Frame frame = frameParser.evaluate(frameToAnalyze);
+            if (frame != null) {
+                result = frame;
+                break;
+            }
+        }
+        return result;
+    }
+
 }
