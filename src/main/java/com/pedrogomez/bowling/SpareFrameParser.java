@@ -27,6 +27,7 @@ class SpareFrameParser implements FrameParser {
     /*
      * Constants
      */
+
     private static final String SPARE = "/";
 
     /*
@@ -35,7 +36,19 @@ class SpareFrameParser implements FrameParser {
 
     @Override
     public Frame evaluate(String frame) {
-        return null;
+        Frame result = null;
+        if (isValidFrame(frame)) {
+            result = new SpareFrame();
+        }
+        return result;
+    }
+
+    /*
+     * Auxiliary methods
+     */
+
+    private boolean isValidFrame(String frame) {
+        return SPARE.equals(frame.charAt(1) + "");
     }
 
 }
