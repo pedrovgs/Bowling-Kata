@@ -107,7 +107,7 @@ public class LineParserTest {
 
     @Test
     public void shouldReturnANormalFrame() {
-        when(mockedZeroFrameParser.evaluate(ANY_NORMAL_FRAME)).thenReturn(new NormalFrame());
+        when(mockedZeroFrameParser.evaluate(ANY_NORMAL_FRAME)).thenReturn(new NormalFrame(0, 0));
 
         List<Frame> frames = lineParser.parse(ANY_NORMAL_FRAME);
 
@@ -119,7 +119,7 @@ public class LineParserTest {
         when(mockedZeroFrameParser.evaluate(ZERO)).thenReturn(new ZeroFrame());
         when(mockedZeroFrameParser.evaluate(STRIKE)).thenReturn(new StrikeFrame());
         when(mockedZeroFrameParser.evaluate(SPARE)).thenReturn(new SpareFrame());
-        when(mockedZeroFrameParser.evaluate(ANY_NORMAL_FRAME)).thenReturn(new NormalFrame());
+        when(mockedZeroFrameParser.evaluate(ANY_NORMAL_FRAME)).thenReturn(new NormalFrame(0, 0));
 
         List<Frame> frames = lineParser.parse(FULL_LINE);
 
