@@ -32,6 +32,7 @@ class BowlingGame {
      */
 
     private static final int FRAMES_PER_GAME = 10;
+    private static final int EXTRA_SPARE_SCORE = 10;
 
     /*
      * Attributes
@@ -79,6 +80,9 @@ class BowlingGame {
         int nextFrame = topNextFrame;
         while (nextFrame < (topNextFrame + frame.getDuplicationDuration())) {
             score = incrementScore(score, frames.get(nextFrame));
+            if (frames.get(nextFrame).getDuplicationDuration() == 1) {
+                nextFrame++;
+            }
             nextFrame++;
         }
         return score;

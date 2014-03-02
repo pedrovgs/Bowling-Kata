@@ -77,9 +77,9 @@ public class BowlingTest {
         validRollsSequences = new HashMap<String, Integer>();
         validRollsSequences.put("XXXXXXXXXXXX", 300);
         validRollsSequences.put("9-9-9-9-9-9-9-9-9-9-", 90);
-        validRollsSequences.put("5/5/5/5/5/5/5/5/5/5/5", 150);
-        validRollsSequences.put("238143XX5/--189/XXX", 135);
         validRollsSequences.put("8-8-8-8-8-8-8-8-8-8-", 80);
+        validRollsSequences.put("238143XX5/--189/XXX", 135);
+        validRollsSequences.put("5/5/5/5/5/5/5/5/5/5/5/", 200);
     }
 
 }

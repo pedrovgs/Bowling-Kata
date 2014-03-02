@@ -81,8 +81,32 @@ public class BowlingGameTest {
     }
 
     @Test
-    public void shouldReturnSumOfNormalFramesCombinedWithSpares() {
+    public void souldReturnPerfectSpareScore() {
+        for (int i = 0; i < 11; i++) {
+            SpareFrame spareFrame = generateSpareFrame();
+            bowlingGame.addFrame(spareFrame);
+        }
 
+        assertEquals(200, bowlingGame.getScore());
+    }
+
+
+    @Test
+    public void shouldReturnSumOfNormalFramesCombinedWithSpares() {
+        bowlingGame.addFrame(new NormalFrame(2, 3));
+        bowlingGame.addFrame(new NormalFrame(8, 1));
+        bowlingGame.addFrame(new NormalFrame(4, 3));
+        bowlingGame.addFrame(new StrikeFrame());
+        bowlingGame.addFrame(new StrikeFrame());
+        bowlingGame.addFrame(new SpareFrame());
+        bowlingGame.addFrame(new ZeroFrame());
+        bowlingGame.addFrame(new NormalFrame(1, 8));
+        bowlingGame.addFrame(new SpareFrame());
+        bowlingGame.addFrame(new StrikeFrame());
+        bowlingGame.addFrame(new StrikeFrame());
+        bowlingGame.addFrame(new StrikeFrame());
+
+        assertEquals(135, bowlingGame.getScore());
     }
 
     @Test
@@ -114,6 +138,10 @@ public class BowlingGameTest {
 
     private StrikeFrame generateStrikeFrame() {
         return new StrikeFrame();
+    }
+
+    private SpareFrame generateSpareFrame() {
+        return new SpareFrame();
     }
 
 }
