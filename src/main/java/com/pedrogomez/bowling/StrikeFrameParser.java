@@ -13,25 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.pedrogomez.bowling;
 
 /**
- * Main class of Bowling kata. This class has the responsibility of instrument all the application dependencies and
- * create a facade to offer the implementation using a single access point. This class will get a string parameter
- * with a valid sequence of rolls for one line and will return an integer with the score.
+ * FrameParser implementation created to return an StrikeFrame parser if the frame analyzed contains only on "X".
+ * This FrameParser will return null if the analyzed frame is not an "X".
  *
  * @author Pedro Vicente Gómez Sánchez.
  */
-public class Bowling {
-    
-    /**
-     * Calculate the score of a roll sequence for a bowling match.
-     *
-     * @param rolls valid sequence of rolls in one line.
-     * @return calculated score.
-     */
-    public int getScore(String rolls) {
-        return -1;
+public class StrikeFrameParser implements FrameParser {
+    @Override
+    public Frame evaluate(String frame) {
+        return null;
     }
-
 }
