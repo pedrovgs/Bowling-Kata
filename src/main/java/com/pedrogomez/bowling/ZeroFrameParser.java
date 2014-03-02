@@ -28,7 +28,7 @@ class ZeroFrameParser implements FrameParser {
      * Constants
      */
 
-    private static final String ZERO = "/";
+    private static final String ZERO = "--";
 
     /*
      * Implemented methods
@@ -36,7 +36,19 @@ class ZeroFrameParser implements FrameParser {
 
     @Override
     public Frame evaluate(String frame) {
-        return null;
+        Frame result = null;
+        if (isValidFrame(frame)) {
+            result = new ZeroFrame();
+        }
+        return result;
+    }
+
+    /*
+     * Auxiliary methods
+     */
+
+    private boolean isValidFrame(String frame) {
+        return ZERO.equals(frame);
     }
 
 }
