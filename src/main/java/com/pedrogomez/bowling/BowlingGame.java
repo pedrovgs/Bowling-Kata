@@ -67,8 +67,7 @@ class BowlingGame {
      */
 
     private int incrementScore(int score, Frame frame) {
-        score += frame.getScore();
-        return score;
+        return score + frame.getScore();
     }
 
     private boolean shouldDuplicateNextScores(Frame frame) {
