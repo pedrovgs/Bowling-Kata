@@ -106,17 +106,43 @@ public class BowlingGameTest {
         bowlingGame.addFrame(new StrikeFrame());
         bowlingGame.addFrame(new StrikeFrame());
 
-        assertEquals(135, bowlingGame.getScore());
+        assertEquals(140, bowlingGame.getScore());
     }
 
     @Test
     public void shouldReturnSumOfNormalFramesCombinedWithStrikes() {
+        bowlingGame.addFrame(new NormalFrame(5, 4));
+        bowlingGame.addFrame(new NormalFrame(5, 4));
+        bowlingGame.addFrame(new NormalFrame(5, 4));
+        bowlingGame.addFrame(new NormalFrame(5, 4));
+        bowlingGame.addFrame(new NormalFrame(5, 4));
+        bowlingGame.addFrame(new NormalFrame(5, 4));
+        bowlingGame.addFrame(new NormalFrame(5, 4));
+        bowlingGame.addFrame(new NormalFrame(5, 4));
+        bowlingGame.addFrame(new NormalFrame(5, 4));
+        bowlingGame.addFrame(new StrikeFrame());
+        bowlingGame.addFrame(new StrikeFrame());
+        bowlingGame.addFrame(new StrikeFrame());
 
+        assertEquals(111, bowlingGame.getScore());
     }
 
     @Test
     public void shouldReturnSumOfNormalFramesCombinedWithSparesAndStrikes() {
+        bowlingGame.addFrame(new SpareFrame());
+        bowlingGame.addFrame(new NormalFrame(5, 4));
+        bowlingGame.addFrame(new NormalFrame(5, 4));
+        bowlingGame.addFrame(new NormalFrame(5, 4));
+        bowlingGame.addFrame(new NormalFrame(5, 4));
+        bowlingGame.addFrame(new SpareFrame());
+        bowlingGame.addFrame(new NormalFrame(5, 4));
+        bowlingGame.addFrame(new NormalFrame(5, 4));
+        bowlingGame.addFrame(new NormalFrame(5, 4));
+        bowlingGame.addFrame(new StrikeFrame());
+        bowlingGame.addFrame(new StrikeFrame());
+        bowlingGame.addFrame(new StrikeFrame());
 
+        assertEquals(131, bowlingGame.getScore());
     }
 
 

@@ -80,7 +80,7 @@ class BowlingGame {
         int nextFrame = topNextFrame;
         while (nextFrame < (topNextFrame + frame.getDuplicationDuration())) {
             score = incrementScore(score, frames.get(nextFrame));
-            if (frames.get(nextFrame).getDuplicationDuration() == 1) {
+            if (frames.get(nextFrame).getDuplicationDuration() == 1 && frame.getDuplicationDuration() != 1) {
                 nextFrame++;
             }
             nextFrame++;
