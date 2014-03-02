@@ -17,18 +17,17 @@
 package com.pedrogomez.bowling;
 
 /**
- * FrameParser implementation created to return an StrikeFrame parser if the frame analyzed contains only one "X".
- * This FrameParser will return null if the analyzed frame is not an "X".
+ * FrameParser implementation created to return an SpareFrame parser if the frame analyzed contains only one "/" at the second char.
+ * This FrameParser will return null if the analyzed frame is not an "/" at the second char.
  *
  * @author Pedro Vicente Gómez Sánchez.
  */
-class StrikeFrameParser implements FrameParser {
+class SpareFrameParser implements FrameParser {
 
     /*
      * Constants
      */
-
-    private static final String STRIKE_FRAME = "X";
+    private static final String SPARE = "/";
 
     /*
      * Implemented methods
@@ -36,10 +35,7 @@ class StrikeFrameParser implements FrameParser {
 
     @Override
     public Frame evaluate(String frame) {
-        Frame result = null;
-        if (STRIKE_FRAME.equals(frame)) {
-            result = new StrikeFrame();
-        }
-        return result;
+        return null;
     }
+
 }
