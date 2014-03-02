@@ -23,8 +23,23 @@ package com.pedrogomez.bowling;
  * @author Pedro Vicente Gómez Sánchez.
  */
 public class StrikeFrameParser implements FrameParser {
+
+    /*
+     * Constants
+     */
+
+    private static final String STRIKE_FRAME = "X";
+
+    /*
+     * Implemented methods
+     */
+
     @Override
     public Frame evaluate(String frame) {
-        return null;
+        Frame result = null;
+        if (STRIKE_FRAME.equals(frame)) {
+            result = new StrikeFrame();
+        }
+        return result;
     }
 }
