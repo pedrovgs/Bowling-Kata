@@ -66,8 +66,16 @@ public class Bowling {
     }
 
     private int getScore(final List<Frame> frames) {
-        //Pending implementation using a BowlingMatch entity to calculate score.
-        return 0;
+        BowlingGame bowlingGame = createBowlingGame(frames);
+        return bowlingGame.getScore();
+    }
+
+    private BowlingGame createBowlingGame(List<Frame> frames) {
+        BowlingGame bowlingGame = new BowlingGame();
+        for (Frame frame : frames) {
+            bowlingGame.addFrame(frame);
+        }
+        return bowlingGame;
     }
 
 }

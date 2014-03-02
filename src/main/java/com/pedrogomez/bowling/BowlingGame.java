@@ -62,14 +62,15 @@ class BowlingGame {
         return score;
     }
 
-    private int incrementScore(int score, Frame frame) {
-        score += frame.getScore();
-        return score;
-    }
 
     /*
      * Auxiliary methods
      */
+
+    private int incrementScore(int score, Frame frame) {
+        score += frame.getScore();
+        return score;
+    }
 
     private boolean shouldDuplicateNextScores(Frame frame) {
         return frame.hasToDuplicateNextFrame() && frame.getDuplicationDuration() > 0;

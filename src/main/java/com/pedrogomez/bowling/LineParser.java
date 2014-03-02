@@ -72,7 +72,7 @@ class LineParser {
     private boolean isOneCharFrame(String line, int i) {
         return line.charAt(i) == ONE_CHAR_VALID_FRAME;
     }
-    
+
     private Frame parseFrame(String line) {
         String frameToAnalyze;
         if (isOneCharFrame(line, parsingIndex)) {
