@@ -1,7 +1,7 @@
-Bowling
-========
+Bowling [![Build Status](https://travis-ci.org/pedrovgs/Bowling-Kata.svg?branch=master)](https://travis-ci.org/pedrovgs/Bowling-Kata)
+=======
 
-Bowling kata implemented in java: [![Build Status](https://travis-ci.org/pedrovgs/Bowling-Kata.svg?branch=master)](https://travis-ci.org/pedrovgs/Bowling-Kata)
+Bowling kata implemented in java:
 
 Create a program, which, given a valid sequence of rolls for one line of American Ten-Pin Bowling, produces the total score for the game.
 
