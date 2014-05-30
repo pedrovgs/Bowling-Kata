@@ -24,15 +24,7 @@ package com.pedrogomez.bowling;
  */
 class StrikeFrameParser implements FrameParser {
 
-    /*
-     * Constants
-     */
-
     private static final String STRIKE_FRAME = "X";
-
-    /*
-     * Implemented methods
-     */
 
     @Override
     public Frame evaluate(String frame) {

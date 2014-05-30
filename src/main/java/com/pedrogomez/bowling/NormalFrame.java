@@ -22,25 +22,13 @@ package com.pedrogomez.bowling;
  */
 class NormalFrame implements Frame {
 
-    /*
-     * Attributes
-     */
-
     private final int firstThrow;
     private final int secondThrow;
-
-    /*
-     * Constructor
-     */
 
     public NormalFrame(int firstThrow, int secondThrow) {
         this.firstThrow = firstThrow;
         this.secondThrow = secondThrow;
     }
-
-    /*
-     * Implemented methods
-     */
 
     @Override
     public int getScore() {

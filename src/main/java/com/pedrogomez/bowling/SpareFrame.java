@@ -22,16 +22,8 @@ package com.pedrogomez.bowling;
  */
 class SpareFrame implements Frame {
 
-    /*
-     * Constants
-     */
-
     private static final int SCORE = 10;
     private static final int DUPLICATE_DURATION = 1;
-
-    /*
-     * Implemented methods
-     */
 
     @Override
     public int getScore() {

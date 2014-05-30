@@ -29,22 +29,10 @@ import static org.junit.Assert.assertTrue;
  */
 public class StrikeFrameParserTest {
 
-    /*
-     * Constants
-     */
     private static final String VALID_STRIKE_FRAME = "X";
     private static final String INVALID_STRIKE_FRAME = "7";
 
-
-    /*
-     * Attributes
-     */
-
     private StrikeFrameParser strikeFrameParser;
-
-    /*
-     * After and before methods
-     */
 
     @Before
     public void setUp() {
@@ -64,10 +52,6 @@ public class StrikeFrameParserTest {
 
         assertNull(result);
     }
-
-    /*
-     * Auxiliary methods
-     */
 
     private void initializeStrikeFrameParser() {
         strikeFrameParser = new StrikeFrameParser();

@@ -24,15 +24,7 @@ package com.pedrogomez.bowling;
  */
 class SpareFrameParser implements FrameParser {
 
-    /*
-     * Constants
-     */
-
     private static final String SPARE = "/";
-
-    /*
-     * Implemented methods
-     */
 
     @Override
     public Frame evaluate(String frame) {
@@ -42,10 +34,6 @@ class SpareFrameParser implements FrameParser {
         }
         return result;
     }
-
-    /*
-     * Auxiliary methods
-     */
 
     private boolean isValidFrame(String frame) {
         return SPARE.equals(frame.charAt(1) + "");

@@ -34,20 +34,12 @@ import static org.mockito.Mockito.when;
  */
 public class LineParserTest {
 
-    /*
-     * Constants
-     */
-
     private static final String ZERO = "--";
     private static final String STRIKE = "X";
     private static final String SPARE = "4/";
     private static final String ANY_NORMAL_FRAME = "8-";
     private static final String FULL_LINE = ZERO + STRIKE + SPARE + ANY_NORMAL_FRAME;
 
-
-    /*
-     * Mocks
-     */
     @Mock
     private FrameParser mockedZeroFrameParser;
     @Mock
@@ -57,26 +49,13 @@ public class LineParserTest {
     @Mock
     private FrameParser mockedNumeralFrameParser;
 
-
-    /*
-     * Test data
-     */
-
     private LineParser lineParser;
-
-    /*
-     * Before and after methods
-     */
 
     @Before
     public void setUp() {
         initializeMocks();
         initializeLineParser();
     }
-
-    /*
-     * Test methods
-     */
 
     @Test
     public void shouldReturnZeroFrame() {
@@ -128,10 +107,6 @@ public class LineParserTest {
         assertTrue(frames.get(2) instanceof SpareFrame);
         assertTrue(frames.get(3) instanceof NormalFrame);
     }
-
-    /*
-     * Auxiliary methods
-     */
 
     private void initializeMocks() {
         MockitoAnnotations.initMocks(this);

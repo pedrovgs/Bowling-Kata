@@ -28,15 +28,8 @@ import java.util.List;
  */
 public class Bowling {
 
-    /*
-     * Attributes
-     */
-
     private LineParser lineParser;
 
-    /*
-     * Constructor
-     */
 
     public Bowling() {
         initializeLineParser();
@@ -53,10 +46,6 @@ public class Bowling {
         List<Frame> frames = lineParser.parse(rolls);
         return getScore(frames);
     }
-
-    /*
-     * Auxiliary methods
-     */
 
     private void initializeLineParser() {
         Collection<FrameParser> parsers = new LinkedList<FrameParser>();

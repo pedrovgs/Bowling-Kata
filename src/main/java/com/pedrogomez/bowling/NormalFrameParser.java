@@ -23,15 +23,8 @@ package com.pedrogomez.bowling;
  * @author Pedro Vicente Gómez Sánchez.
  */
 public class NormalFrameParser implements FrameParser {
-    /*
-     * Constants
-     */
 
     private static final String ZERO = "-";
-
-    /*
-     * Implemented methods
-     */
 
     @Override
     public Frame evaluate(String frame) {
@@ -51,10 +44,6 @@ public class NormalFrameParser implements FrameParser {
     private Frame getFrame(int firstThrow, int secondThrow) {
         return new NormalFrame(firstThrow, secondThrow);
     }
-
-    /*
-     * Auxiliary methods
-     */
 
     private int getScore(String partialFrame) {
         int score = 0;

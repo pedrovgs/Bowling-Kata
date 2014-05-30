@@ -31,29 +31,15 @@ import static org.junit.Assert.assertEquals;
  */
 public class BowlingTest {
 
-    /*
-     * Test data
-     */
-
     private Bowling bowling;
 
     private Map<String, Integer> validRollsSequences;
-
-    /*
-     * Before and after methods
-     */
 
     @Before
     public void setUp() {
         initializeBowling();
         initializeRollsSequences();
     }
-
-
-
-    /*
-     * Test methods
-     */
 
     @Test
     public void shouldCalculateTheCorrectScore() {
@@ -64,10 +50,6 @@ public class BowlingTest {
             assertEquals(expectedResult, result);
         }
     }
-
-    /*
-     * Auxiliary methods
-     */
 
     private void initializeBowling() {
         bowling = new Bowling();

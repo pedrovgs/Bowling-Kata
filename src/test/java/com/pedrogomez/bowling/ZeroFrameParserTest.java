@@ -29,22 +29,10 @@ import static org.junit.Assert.assertTrue;
  */
 public class ZeroFrameParserTest {
 
-    /*
-     * Constants
-     */
     private static final String VALID_ZERO_FRAME = "--";
     private static final String INVALID_ZERO_FRAME = "4-";
 
-
-    /*
-     * Attributes
-     */
-
     private ZeroFrameParser zeroFrameParser;
-
-    /*
-     * After and before methods
-     */
 
     @Before
     public void setUp() {
@@ -64,10 +52,6 @@ public class ZeroFrameParserTest {
 
         assertNull(result);
     }
-
-    /*
-     * Auxiliary methods
-     */
 
     private void initializeStrikeFrameParser() {
         zeroFrameParser = new ZeroFrameParser();

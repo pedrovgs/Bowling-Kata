@@ -29,24 +29,12 @@ import static org.junit.Assert.assertEquals;
  */
 public class BowlingGameTest {
 
-    /*
-     * Test data
-     */
-
     private BowlingGame bowlingGame;
-
-    /*
-     * Before and after methods
-     */
 
     @Before
     public void setUp() {
         initializeBowlingGame();
     }
-
-    /*
-     * Test methods
-     */
 
     @Test
     public void shouldReturnZeroScore() {
@@ -144,11 +132,6 @@ public class BowlingGameTest {
 
         assertEquals(131, bowlingGame.getScore());
     }
-
-
-    /*
-     * Auxiliary methods
-     */
 
     private void initializeBowlingGame() {
         bowlingGame = new BowlingGame();

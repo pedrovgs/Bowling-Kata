@@ -24,15 +24,7 @@ package com.pedrogomez.bowling;
  */
 class ZeroFrameParser implements FrameParser {
 
-    /*
-     * Constants
-     */
-
     private static final String ZERO = "--";
-
-    /*
-     * Implemented methods
-     */
 
     @Override
     public Frame evaluate(String frame) {
@@ -42,10 +34,6 @@ class ZeroFrameParser implements FrameParser {
         }
         return result;
     }
-
-    /*
-     * Auxiliary methods
-     */
 
     private boolean isValidFrame(String frame) {
         return ZERO.equals(frame);

@@ -22,15 +22,7 @@ package com.pedrogomez.bowling;
  */
 class ZeroFrame implements Frame {
 
-    /*
-     * Constants
-     */
-
     private static final int SCORE = 0;
-
-    /*
-     * Implemented methods
-     */
 
     @Override
     public int getScore() {

@@ -22,16 +22,8 @@ package com.pedrogomez.bowling;
  */
 class StrikeFrame implements Frame {
 
-    /*
-     * Constants
-     */
-
     private static final int SCORE = 10;
     private static final int DUPLICATION_DURATION = 2;
-
-    /*
-     * Implemented methods
-     */
 
     @Override
     public int getScore() {

@@ -27,22 +27,10 @@ import java.util.List;
  */
 class LineParser {
 
-    /*
-     * Constants
-     */
-
     public static final char ONE_CHAR_VALID_FRAME = 'X';
-
-    /*
-     * Attributes
-     */
 
     private final Collection<FrameParser> parsers;
     private int parsingIndex;
-
-    /*
-     * Constructor
-     */
 
     public LineParser(Collection<FrameParser> parsers) {
         this.parsers = parsers;
@@ -63,11 +51,6 @@ class LineParser {
         }
         return frames;
     }
-
-
-    /*
-     * Auxiliary methods
-     */
 
     private boolean isOneCharFrame(String line, int i) {
         return line.charAt(i) == ONE_CHAR_VALID_FRAME;

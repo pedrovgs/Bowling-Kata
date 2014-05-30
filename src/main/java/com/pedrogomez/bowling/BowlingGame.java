@@ -27,22 +27,9 @@ import java.util.List;
  */
 class BowlingGame {
 
-    /*
-     * Constants
-     */
-
     private static final int FRAMES_PER_GAME = 10;
 
-    /*
-     * Attributes
-     */
-
     private List<Frame> frames = new LinkedList<Frame>();
-
-
-    /*
-     * Public methods
-     */
 
     void addFrame(Frame frame) {
         frames.add(frame);
@@ -60,11 +47,6 @@ class BowlingGame {
         }
         return score;
     }
-
-
-    /*
-     * Auxiliary methods
-     */
 
     private int incrementScore(int score, Frame frame) {
         return score + frame.getScore();
@@ -86,6 +68,5 @@ class BowlingGame {
         }
         return score;
     }
-
 
 }
